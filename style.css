@@ -1,0 +1,130 @@
+* {
+	font-family: Roboto;
+}
+
+body {
+	margin: 0;
+}
+
+#gameConfig {
+	position: absolute;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	top: -30px;
+	padding: 50px 0;
+	width: 50%;
+	background: rgba(255,255,255, 0.8);
+	border: 3px solid grey;
+	border-radius: 30px;
+	box-shadow: 0 0 20px grey;
+	text-align: center;
+	z-index: 1000;
+}
+
+#gameConfig div {
+	margin-bottom: 20px;
+}
+
+#gameConfig input[type=range] {
+	width: 40%;
+}
+
+#gameConfig input[type=submit] {
+	margin-top: 20px;
+}
+
+#displayText {
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	width: 800px;
+	height: 300px;
+	text-align: center;
+	text-shadow: white 1px 1px, white -1px 1px, white -1px -1px, white 1px -1px; 
+	font-size: 80px;
+	z-index: 999;
+}
+
+#map{
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	width: 90vw;
+	height: 90vw;
+	max-height: 90vh;
+	max-width: 90vh;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#map li {
+	display: flex;
+	justify-content: center;
+	flex: 1;
+	max-height: 100px;
+}
+
+#map li div {
+	flex: 1;
+	max-width: 100px;
+	box-sizing: border-box;
+	border: 1px solid rgb(220,220,220);
+}
+
+#map div[class*='obstacle'] {
+	background-image: url(img/obstacle.png);
+	background-size: 100% 100%;
+}
+
+#map div[class*='medpack'] {
+	background-image: url(img/medpack.png);
+	background-size: 100% 100%;
+}
+
+#map .movementsquare {
+	box-shadow: inset 0px 0px 10px grey;
+	border-radius: 10%;
+	z-index: 999;
+}
+
+#map .movementsquare:hover {
+	box-shadow: inset 0px 0px 20px grey;
+}
+
+div[id*='headerplayer'] {
+	position: absolute;
+	display: inline;
+	z-index: 999;
+}
+
+div[id*='headerplayer'] > p {
+	text-align: center;
+	margin: 0 0 5px 0;
+	font-size: 1vw;
+	text-shadow: white 1px 1px, white -1px 1px, white -1px -1px, white 1px -1px; 
+}
+
+div[id*='hpbarplayer'] {
+	height: 5px;
+	background: green;
+}
+
+#battleMenu {
+	position: absolute;
+	padding: 0.5%;
+	background: rgba(200,200,200,0.5);
+	border-radius: 10px;
+	border: 1px solid black;
+	opacity: 0;
+	z-index: 999;
+}

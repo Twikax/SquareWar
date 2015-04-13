@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<title> SquareWar </title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div id="gameConfig">
+		<div>
+			<label>Map Scale</label>
+			<div>
+				<input type="range" min="5" max="20" value="10">
+			</div>
+		</div>
+		<div>
+			<label>Players</label>
+			<table align="center">
+				<thead>
+					<tr>
+						<th></th>
+						<th>Name</th> 
+						<th>Team</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr id="player1">
+						<td><input type="checkbox"></td>
+						<td><input type="text" value="Player1" disabled></td> 
+						<td>
+							<select disabled>
+								<option value="blue">Blue</option>
+								<option value="red">Red</option>
+								<option value="yellow">Yellow</option>
+								<option value="green">Green</option>
+							</select>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div>
+			<input type="submit" value="Start Game">
+		</div>
+	</div>
+	<div id="displayText">
+		<p></p>
+	</div>
+	<div id="battleMenu">
+		<button id="attack">Attack</button>
+		<button id="defend">Defend</button>
+		<button id="flee">Flee</button>
+	</div>
+	<script src="js/game/Game.js"></script>
+	<script src="js/game/Map.js"></script>
+	<script src="js/game/Grid.js"></script>
+	<script src="js/objects/Object.js"></script>
+	<script src="js/objects/environment/Player.js"></script>
+	<script src="js/objects/items/Weapon.js"></script>
+	<script src="js/objects/environment/Gate.js"></script>
+	<script src="js/objects/items/Medpack.js"></script>
+	<script src="js/objects/environment/Obstacle.js"></script>
+	<script src="js/view.js"></script>
+	<script src="js/misc.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/form.js"></script>
+</body>
+</html>
