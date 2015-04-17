@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
 	<meta charset="UTF-8">
-	<title> SquareWar - Login </title>
+	<title> SquareWar - Server List </title>
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,6 +20,7 @@
 				</tr>
 			</tbody>
 		</table>
+		<a href="logout.php">Log Out</a>
 	</div>
 </body>
 </html>

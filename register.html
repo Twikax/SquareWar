@@ -6,22 +6,18 @@
 </head>
 <body>
 	<div id="gameLogin">
-		<form action="login.html">
+		<form action="register_post.php" method="post">
 			<div>
 				<label for="username">Username :</label>
-				<input type="text" name="username" placeholder="Username" required>
+				<input type="text" name="name" placeholder="Username" min="2" max="12" required>
 			</div>
 			<div>
 				<label for="email">E-mail :</label>
-				<input type="email" name="email" placeholder="E-mail" required>
+				<input type="email" name="email" placeholder="E-mail" pattern="^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$" required>
 			</div>
 			<div>
 				<label for="password">Password :</label>
-				<input type="password" name="password" placeholder="Password" required>
-			</div>
-			<div>
-				<label for="confirmpassword">Confirm Password :</label>
-				<input type="password" name="confirmpassword" placeholder="Password" required>
+				<input type="password" name="password" placeholder="Password" min="6" max="20"  required>
 			</div>
 			<div>
 				<input type="submit" value="Register">
