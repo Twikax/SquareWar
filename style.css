@@ -6,7 +6,7 @@ body {
 	margin: 0;
 }
 
-#gameLogin {
+#window {
 	position: absolute;
 	margin: 0 auto;
 	left: 0;
@@ -19,6 +19,10 @@ body {
 	border-radius: 30px;
 	box-shadow: 0 0 20px grey;
 	text-align: center;
+}
+
+#window div {
+	margin-bottom: 20px;
 }
 
 #serverlist {
@@ -38,10 +42,6 @@ body {
 
 #serverlist tbody tr:hover {
 	background: rgb(230,230,230);
-}
-
-#gameLogin div {
-	margin-bottom: 20px;
 }
 
 #gameConfig {

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<title> SquareWar - Create Server </title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div id="window">
+		<form action="createserver_post.php" method="post">
+			<div>
+				<label for="servername">Server Name :</label>
+				<input type="text" name="servername" value="New Server" min="3" max="20" required>
+			</div>
+			<div>
+				<label for="maxplayers">Max Players :</label>
+				<input type="number" name="maxplayers" value="4" min="2" max="8" required>
+			</div>
+			<div>
+				<input type="submit" value="Create Server">
+			</div>
+		</form>
+	</div>
+</body>
+</html>
