@@ -11,6 +11,7 @@
 </head>
 <body>
 	<div id="window">
+		<div><p>You are logged in as <?php echo htmlspecialchars($_SESSION['name']); ?>.</p></div>
 		<div><a href="createserver.html">Create Server</a></div>
 		<div>
 			<table id="serverlist">
@@ -27,14 +28,19 @@
 						catch(Exception $e) {
 							die('Erreur : '.$e->getMessage());
 						}
-						$req = $bdd->query('SELECT name, max_players, status FROM servers');
+						$req = $bdd->query('SELECT id, name, max_players, status FROM servers');
 						while ($donnees = $req->fetch()) {
+							$req1 = $bdd->prepare('SELECT COUNT(*) AS nb_players FROM players_in_servers WHERE idserver = ?');
+							$req1->execute(array($donnees['id']));
+							$resultat = $req1->fetch();
+							$nb_players = $resultat['nb_players'];
+							$req1->closeCursor();
 						?>
-							<tr>
-								<td><?php echo htmlspecialchars($donnees['name']); ?></td>
-								<td>0/<?php echo htmlspecialchars($donnees['max_players']); ?></td>
-								<td><?php echo htmlspecialchars($donnees['status']); ?></td>
-							</tr>
+						<tr onclick="location.href='join_server.php?idserver=<?php echo $donnees['id']; ?>'">
+							<td><?php echo htmlspecialchars($donnees['name']); ?></td>
+							<td><?php echo $nb_players . '/' . htmlspecialchars($donnees['max_players']); ?></td>
+							<td><?php echo htmlspecialchars($donnees['status']); ?></td>
+						</tr>
 						<?php
 						}
 						$req->closeCursor();
